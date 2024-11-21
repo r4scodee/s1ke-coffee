@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+SC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar section-content">
+        <a href="#" class="logo">
+          <h2 class="logo-text">☕ Sike Coffee</h2>
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#targetId" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="nav-link">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div
+      class="landing-page-contact"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="400"
+      data-aos-offset="0"
+    >
+      <div data-aos="fade-down" data-aos-duration="1300" data-aos-delay="300">
+        <h4>Feedback</h4>
+        <h2>Contact Us</h2>
+      </div>
+    </div>
+
+    <section class="contact-us">
+      <div
+        class="contact-info"
+        data-aos="fade-right"
+        data-aos-duration="1400"
+        data-aos-delay="300"
+      >
+        <img src="art.jpg" alt="img" />
+        <h3>Sike Coffee - since 2024</h3>
+        <p>
+          Sike Coffee. Coffee for the workers, the more you drink, the more
+          unstoppable you get!
+        </p>
+      </div>
+      <div
+        class="contact-info"
+        data-aos="fade-left"
+        data-aos-delay="200"
+        data-aos-duration="1200"
+      >
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here"
+            rows="6"
+            required
+          ></textarea>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="landing-last">
+      <div
+        class="last-desc"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        data-aos-delay="100"
+      >
+        <h2>Our Social Media</h2>
+        <p>You can communicate further with us through our social media :</p>
+      </div>
+    </section>
+
+    <section class="social-landing">
+      <div
+        class="social-media"
+        data-aos="fade-up"
+        data-aos-duration="1400"
+        data-aos-delay="100"
+      >
+        <ul>
+          <li>
+            <a href="https://wa.me/6283150773059" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h2>Contact</h2>
+              <p>083150773059</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/1rb4dh" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+              <h2>Instagram</h2>
+              <p>@1rb4dh</p>
+              <p>@r1skendoo</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-facebook"></i>
+              <h2>Facebook</h2>
+              <p>Sike Coffee</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <p>Copyright &COPY; 2024 Sike Coffee. All right reserved</p>
+      </div>
+    </footer>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
