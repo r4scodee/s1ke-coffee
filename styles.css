@@ -46,11 +46,9 @@ header {
     padding: 50px;
   }
   .navbar .logo{
+    width: auto;
     display: flex;
     justify-content: center;
-  }
-  .navbar .logo .logo-text{
-    width: auto;
   }
   .navbar .logo .nav-menu .menu-item{
     padding: 10px;
