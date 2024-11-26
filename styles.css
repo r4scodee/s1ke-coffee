@@ -580,6 +580,16 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  header{
+    position: sticky;
+  }
+  .navbar .logo{
+    padding: 10px;
+  }
+
+  .hero-section{
+    height: auto;
+  }
   .container1{
     width: 100%;
     padding: 20px;
