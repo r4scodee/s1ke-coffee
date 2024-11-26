@@ -542,12 +542,14 @@ footer {
 }
 
 .social-landing {
+  width: 100%;
   text-align: center;
   padding: 20px;
 }
 
 .social-landing .social-media ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 80px;
 }
@@ -603,5 +605,12 @@ footer {
     flex-wrap: wrap;
     width: 100%;
   }
-
+  .menu-item:active {
+  transform: scale(1.05);
+  background-color: #edededa3;
+  }
+  .contact-us .contact-info img{
+    width: 400px;
+    justify-content: center;
+  }
 }
