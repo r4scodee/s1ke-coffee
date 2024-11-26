@@ -42,13 +42,11 @@ header {
 @media  screen and (max-width: 768px) {
   .navbar{
     display: flex;
-    flex-direction: column;
     padding: 50px;
   }
   .navbar .logo{
     width: auto;
     display: flex;
-    justify-content: center;
   }
   .navbar .logo .nav-menu .menu-item{
     padding: 10px;
