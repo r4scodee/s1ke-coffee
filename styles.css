@@ -42,6 +42,7 @@ header {
 @media  screen and (max-width: 768px) {
   .navbar{
     display: flex;
+    flex-direction: column;
     padding: 50px;
   }
   .navbar .logo{
