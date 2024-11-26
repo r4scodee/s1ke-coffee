@@ -9,17 +9,6 @@ document.querySelectorAll("#to").forEach((anchor) => {
   });
 });
 
-const slider = document.querySelector(".img-slider");
-let index = 0;
-const images = document.querySelectorAll(".img-slider img");
-const totalImages = images.length;
-
-function moveToNextImage() {
-  index = (index + 1) % totalImages;
-  slider.style.transform = `translateX(-${index * 100}%)`;
-}
-setInterval(moveToNextImage, 3000);
-
 document.addEventListener("DOMContentLoaded", () => {
   if (window.location.hash) {
     const target = document.querySelector(window.location.hash);
