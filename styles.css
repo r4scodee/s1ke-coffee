@@ -600,6 +600,26 @@ footer {
 
   .hero-section{
     height: auto;
+    padding: 0px;
+  }
+  .hero-section .section-content{
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 20px 20px;
+  }
+
+  .hero-section .hero-details :is(.subtitle, .desc){
+    max-width: 100%;
+  }
+
+  .hero-section .hero-details .buttons{
+    justify-content: center;
+  }
+
+  .hero-section .hero-img-wrapper{
+  max-width: 270px;
+  margin-right: 0;
   }
   .container1{
     width: 100%;
@@ -618,6 +638,17 @@ footer {
   transform: scale(1.05);
   background-color: #edededa3;
   }
+
+  .landing-page-profil{
+    height: auto;
+    padding: 20px;
+  }
+
+  .landing-page-contact{
+    padding: 20px;
+    height: auto;
+  }
+
   .contact-us .contact-info img{
     width: 400px;
     justify-content: center;
