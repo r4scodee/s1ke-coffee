@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=NTR&family=Outfit:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   font-family: "Montserrat", sans-serif;
@@ -51,18 +52,33 @@ header {
 header .navbar {
   display: flex;
   align-items: center;
-  padding: 20px 50px;
+  padding: 20px 100px;
   justify-content: space-between;
 }
 
 .navbar .logo {
   text-decoration: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 .navbar .logo .logo-text {
   color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Amatic SC', sans-serif;
+  text-transform: space;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.navbar .logo img{
+  height: 45px;
+  width: 45px;
+  object-fit: contain;
+  align-items: center;
+
 }
 
 .navbar .nav-menu {
