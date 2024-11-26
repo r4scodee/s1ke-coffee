@@ -108,8 +108,8 @@ header .navbar {
 
 .hero-section .section-content {
   width: 100%;
+  min-height: 100vh;
   display: flex;
-  height: 100vh;
   flex-wrap: wrap;
   align-items: center;
   color: #fff;
