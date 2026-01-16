@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Revolution&family=Shadows+Into+Light+Two&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Revolution&family=Shadows+Into+Light+Two&display=swap");
 * {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -10,7 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   display: none;
 }
 
@@ -32,80 +32,162 @@ img {
   width: 100%;
 }
 
+/* RESET DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* HEADER */
 header {
+  width: 100%;
   background: #42281b;
-  position: fixed;
-  z-index: 5;
+  border-bottom: 1px solid #6c4b4b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* NAVBAR */
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1100;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* MENU */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #8b5e3c;
+}
+
+/* GARIS HOVER ELEGAN */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #8b5e3c;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
   width: 100%;
 }
 
-@media  screen and (max-width: 768px) {
-  .navbar{
-    display: flex;
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    z-index: 1100;
+  }
+
+  /* MENU JADI VERTICAL */
+  .nav-menu {
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
-    padding: 50px;
+    gap: 18px;
+    margin-top: 16px;
+    padding-top: 16px;
   }
-  .navbar .logo{
-    width: auto;
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hamburger {
     display: flex;
-    justify-content: center;
+    z-index: 1100;
   }
-  .navbar .logo .nav-menu .menu-item{
-    padding: 10px;
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
   }
 }
 
-header .navbar {
-  display: flex;
-  align-items: center;
-  padding: 20px 100px;
-  justify-content: space-between;
+/* ANIMASI X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
-.navbar .logo {
-  text-decoration: none;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
 }
 
-.navbar .logo .logo-text {
-  color: #fff;
-  align-items: center;
-  justify-content: center;
-  font-family: "Shadows Into Light Two", cursive;
-  text-transform: space;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.navbar .logo img{
-  height: 45px;
-  width: 45px;
-  object-fit: contain;
-  align-items: center;
-
-}
-
-.navbar .nav-menu {
-  display: flex;
-  gap: 10px;
-}
-
-.navbar .nav-menu .nav-link {
-  color: #fff;
-  padding: 10px 18px;
-  background: #42281b;
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-.navbar .nav-menu .nav-link:hover {
-  color: #42281b;
-  background-color: #d8d2c2;
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .hero-section {
@@ -591,65 +673,66 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  header{
+  header {
     position: sticky;
+    z-index: 1100;
   }
-  .navbar .logo{
+  .navbar .logo {
     padding: 10px;
   }
 
-  .hero-section{
+  .hero-section {
     height: auto;
     padding: 0px;
   }
-  .hero-section .section-content{
+  .hero-section .section-content {
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
     padding: 0px 20px 20px;
   }
 
-  .hero-section .hero-details :is(.subtitle, .desc){
+  .hero-section .hero-details :is(.subtitle, .desc) {
     max-width: 100%;
   }
 
-  .hero-section .hero-details .buttons{
+  .hero-section .hero-details .buttons {
     justify-content: center;
   }
 
-  .hero-section .hero-img-wrapper{
-  max-width: 270px;
-  margin-right: 0;
+  .hero-section .hero-img-wrapper {
+    max-width: 270px;
+    margin-right: 0;
   }
-  .container1{
+  .container1 {
     width: 100%;
     padding: 20px;
   }
 
-  .box-menu{
+  .box-menu {
     height: auto;
   }
-  .container2{
+  .container2 {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   }
   .menu-item:active {
-  transform: scale(1.05);
-  background-color: #edededa3;
+    transform: scale(1.05);
+    background-color: #edededa3;
   }
 
-  .landing-page-profil{
+  .landing-page-profil {
     height: auto;
     padding: 20px;
   }
 
-  .landing-page-contact{
+  .landing-page-contact {
     padding: 20px;
     height: auto;
   }
 
-  .contact-us .contact-info img{
+  .contact-us .contact-info img {
     width: 400px;
     justify-content: center;
   }
